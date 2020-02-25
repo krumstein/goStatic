@@ -10,7 +10,7 @@ RUN mkdir ./bin && \
     echo "appuser:x:$ID:$ID::/sbin/nologin:/bin/false" > ./bin/etc/passwd && \
     echo "appgroup:x:$ID:appuser" > ./bin/etc/group
 
-# stage 1
+# stage 
 FROM scratch
 WORKDIR /
 COPY --from=builder /go/src/github.com/PierreZ/goStatic/bin/ .
